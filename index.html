@@ -7,6 +7,8 @@
     <meta name="description" content="ディスクリプションを入力">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- <link rel="shortcut icon" href="favicon.ico"> -->
 
     <!-- [if lt IE 9] -->
@@ -19,26 +21,184 @@
   <body>
     <!----- header----->
     <header>
-      <img src="img/logo.svg" alt="">
+      <img src="img/header-logo.png" alt="">
       
       
       
     </header>
-    <nav>ナビ</nav>
+    <!-- <nav>ナビ</nav> -->
     <!----- /header ----->
     
     <!----- main ----->
     
     <section class="fv">
       <!-- <img src="img/logo.svg" alt=""> -->
-      <ul class="slide">
-        <li><img src="img/雰囲気2.JPG" alt=""></li>
-        <li><img src="img/ボロネーゼ4.JPG" alt=""></li>
-        <li><img src="img/前菜盛り5種.JPG" alt=""></li>
-        <li><img src="img/aburikapure2.JPG" alt=""></li>
-        <li><img src="img/テラス.png" alt=""></li>
-      </ul>
+      <div class="slideshow" id="slideshow">
+        <img src="img/fv-naisou.jpg" alt="">
+        <img src="img/fv-borone-ze.JPG" alt="">
+        <img src="img/fv-zensai.JPG" alt="">
+        <img src="img/fv-aburikapure.JPG" alt="">
+        <img src="img/fv-terasu.png" alt="">
+      </div>
+      <div class="fv-logo">
+        <img src="img/header-logo.png" alt="">
+      </div>
+      <div class="fv-gradient"></div>
+    </section>
 
+    <section class="main">
+      <div class="concept">
+        <div class="title title-r">
+          <h2>concept</h2>
+        </div>
+        <div class="block">
+          <div class="block-text">
+            <h3>気軽に楽しめる、創作イタリアン。</h3>
+            <div class="block-text-border"></div>
+            <p>和と洋が合わさった店内は、靴を脱いで<br>
+              掘り炬燵式のカウンタースタイル。<br>
+              座布団に腰掛け、食べるイタリアン。<br>
+              テラスでは、ペットとのご飯も可能。<br>
+              型に囚われないお店で<br>
+              肩の力を抜いてお楽しみ下さい。
+            </p>
+          </div>
+          <img src="img/1.png" alt="">
+        </div>
+
+        <div class="block">
+          <img src="img/2.png" alt="">
+          <div class="block-text">
+            <h3>自分の美味しいに素直に。</h3>
+            <div class="block-text-border"></div>
+            <p>美味しいと思ったものは、何でも<br>
+              素直に取り入れるスタンスのお店です。<br>
+              和洋折衷、何でも御座れ。<br>
+              カテゴリーへのこだわりはありません。<br>
+              こだわらない事が『こだわり』なのです。
+            </p>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="block-text">
+            <h3>十人十色、楽しみ方はそれぞれに。</h3>
+            <div class="block-text-border"></div>
+            <p>どうか、こうじゃなきゃいけないという<br>
+              固定観念は取り払って、楽しみましょう。<br>
+              失敗という結果から生まれた料理も<br>
+              インジニアスにはたくさんあります。<br>
+              創作するのは、料理人だけではありません。
+            </p>
+          </div>
+          <img src="img/3.png" alt="">
+        </div>
+      </div>
+
+
+      <div class="menu">
+        <div class="title title-r">
+          <h2>menu</h2>
+        </div>
+        <div class="block">
+          <img src="img/4.JPG" alt="">
+          <div class="block-text">
+            <h3>気軽に楽しめる、創作イタリアン。</h3>
+            <div class="block-text-border"></div>
+            <p>和と洋が合わさった店内は、靴を脱いで<br>
+              掘り炬燵式のカウンタースタイル。<br>
+              座布団に腰掛け、食べるイタリアン。<br>
+              テラスでは、ペットとのご飯も可能。<br>
+              型に囚われないお店で<br>
+              肩の力を抜いてお楽しみ下さい。
+            </p>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="block-text">
+            <h3>十人十色、楽しみ方はそれぞれに。</h3>
+            <div class="block-text-border"></div>
+            <p>どうか、こうじゃなきゃいけないという<br>
+              固定観念は取り払って、楽しみましょう。<br>
+              失敗という結果から生まれた料理も<br>
+              インジニアスにはたくさんあります。<br>
+              創作するのは、料理人だけではありません。
+            </p>
+          </div>
+          <img src="img/5.png" alt="">
+        </div>
+
+        <div class="block">
+          <img src="img/6.JPG" alt="">
+          <div class="block-text">
+            <h3>自分の美味しいに素直に。</h3>
+            <div class="block-text-border"></div>
+            <p>美味しいと思ったものは、何でも<br>
+              素直に取り入れるスタンスのお店です。<br>
+              和洋折衷、何でも御座れ。<br>
+              カテゴリーへのこだわりはありません。<br>
+              こだわらない事が『こだわり』なのです。
+            </p>
+          </div>
+        </div>
+        <div class="block">
+          <div class="block-text">
+            <h3>十人十色、楽しみ方はそれぞれに。</h3>
+            <div class="block-text-border"></div>
+            <p>どうか、こうじゃなきゃいけないという<br>
+              固定観念は取り払って、楽しみましょう。<br>
+              失敗という結果から生まれた料理も<br>
+              インジニアスにはたくさんあります。<br>
+              創作するのは、料理人だけではありません。
+            </p>
+          </div>
+          <img src="img/7.png" alt="">
+        </div>
+
+        <div class="block">
+          <img src="img/8.JPG" alt="">
+          <div class="block-text">
+            <h3>自分の美味しいに素直に。</h3>
+            <div class="block-text-border"></div>
+            <p>美味しいと思ったものは、何でも<br>
+              素直に取り入れるスタンスのお店です。<br>
+              和洋折衷、何でも御座れ。<br>
+              カテゴリーへのこだわりはありません。<br>
+              こだわらない事が『こだわり』なのです。
+            </p>
+          </div>
+        </div>
+        <div class="block">
+          <div class="block-text">
+            <h3>十人十色、楽しみ方はそれぞれに。</h3>
+            <div class="block-text-border"></div>
+            <p>どうか、こうじゃなきゃいけないという<br>
+              固定観念は取り払って、楽しみましょう。<br>
+              失敗という結果から生まれた料理も<br>
+              インジニアスにはたくさんあります。<br>
+              創作するのは、料理人だけではありません。
+            </p>
+          </div>
+          <img src="img/9.png" alt="">
+        </div>
+
+        <div class="block">
+          <img src="img/10.JPG" alt="">
+          <div class="block-text">
+            <h3>自分の美味しいに素直に。</h3>
+            <div class="block-text-border"></div>
+            <p>美味しいと思ったものは、何でも<br>
+              素直に取り入れるスタンスのお店です。<br>
+              和洋折衷、何でも御座れ。<br>
+              カテゴリーへのこだわりはありません。<br>
+              こだわらない事が『こだわり』なのです。
+            </p>
+          </div>
+        </div>
+
+
+      </div>
 
     </section>
 

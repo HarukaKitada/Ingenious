@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -93,6 +94,25 @@ input, select {
   vertical-align: middle;
 }
 
+/*
+WEBフォントで「ふい字(HuiFontP109)」 ver130717
+http://customtemplate.blog112.fc2.com/blog-entry-143.html
+*/
+@font-face {
+  font-family: 'HuiFontP109';
+  src: url("https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot");
+  src: url("https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/s/7pscemjdvt0wyiq/HuiFontP109.woff") format("woff"), url("https://dl.dropboxusercontent.com/s/0w9uuopxrns8ehi/HuiFontP109.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/s/xnnsbxtz8o6d98i/HuiFontP109.svg#HuiFontP109") format("svg");
+}
+
+img {
+  filter: grayscale(7%) contrast(110%);
+}
+
+html {
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
 header {
   position: fixed;
   top: 24px;
@@ -100,22 +120,104 @@ header {
   z-index: 5;
 }
 
+header img {
+  width: 26vw;
+  height: auto;
+  min-width: 150px;
+}
+
 .fv {
   width: 100vw;
   height: 100vh;
 }
 
-.fv .slide {
-  float: left;
-  list-style: none;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+.fv .slideshow {
   position: relative;
-  top: 10px;
+  z-index: -1;
 }
 
-.fv .slide li img {
-  width: 100%;
+.fv .slideshow img {
+  width: 100vw;
+  /* 画像の横幅 */
+  height: 100vh;
+  /* 画像の縦幅 */
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 1.5s;
+  /* フェードの時間(秒) */
+}
+
+.fv .slideshow .show {
+  opacity: 1;
+  z-index: 1;
+}
+
+.fv-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  height: 55vw;
+}
+
+.fv-logo img {
+  width: 50vw;
   height: auto;
+}
+
+.fv-gradient {
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(rgba(255, 255, 255, 0), #2e2e2e);
+  top: 80vh;
+  position: absolute;
+}
+
+.block {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.block img {
+  width: 50vw;
+  height: 55vw;
+  object-fit: cover;
+}
+
+.block-text {
+  text-align: center;
+  width: 50vw;
+}
+
+.block-text h3 {
+  font-family: 'HuiFontP109';
+  letter-spacing: 1.5px;
+  font-weight: normal;
+  padding-bottom: 16px;
+  font-size: 24px;
+}
+
+.block-text-border {
+  width: 320px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #fff;
+}
+
+.block-text p {
+  font-family: 'Montserrat';
+  letter-spacing: 1.6px;
+  line-height: 400%;
+  margin: 0 auto;
+  width: 400px;
+  padding-top: 40px;
+}
+
+.menu .block img {
+  height: 35vw;
 }
