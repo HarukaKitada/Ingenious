@@ -176,6 +176,42 @@ header img {
   position: absolute;
 }
 
+.title {
+  position: relative;
+  top: 48px;
+  margin: 0 auto;
+  width: 70vw;
+  height: 0;
+}
+
+.title h2 {
+  font-size: 24px;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+
+.title-r h2 {
+  text-align: left;
+}
+
+.title-l h2 {
+  text-align: right;
+}
+
+.title-bar {
+  width: 85vw;
+  height: 1px;
+  background-color: #fff;
+  position: relative;
+  top: 88px;
+  margin-left: 15vw;
+  z-index: 4;
+}
+
+.bar-l {
+  margin: 0;
+}
+
 .block {
   display: flex;
   width: 100vw;
@@ -197,6 +233,7 @@ header img {
 .block-text h3 {
   font-family: 'HuiFontP109';
   letter-spacing: 1.5px;
+  line-height: 200%;
   font-weight: normal;
   padding-bottom: 16px;
   font-size: 24px;
@@ -218,6 +255,104 @@ header img {
   padding-top: 40px;
 }
 
+.block-text .menu-btn {
+  width: 19.5vw;
+  margin: 0 auto;
+  height: 3vw;
+  border: solid 1px  #fff;
+  margin-top: 24px;
+}
+
+.block-text .menu-btn a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  line-height: 3vw;
+}
+
 .menu .block img {
   height: 35vw;
+}
+
+.menu .block-text p {
+  font-size: 13px;
+  line-height: 250%;
+}
+
+.menu .first-menu img {
+  height: 45vw;
+}
+
+iframe {
+  width: 100vw;
+  height: 30vw;
+  filter: grayscale(50%);
+}
+
+.concept .access .contact {
+  margin: 0;
+  padding: 0;
+}
+
+.access .block img {
+  height: 45vw;
+}
+
+.access .block-text {
+  margin-left: 15vw;
+  text-align: left;
+}
+
+.access .block-text > div {
+  padding-top: 32px;
+}
+
+.access .block-text p {
+  font-size: 16px;
+  width: auto;
+  line-height: 100%;
+  padding-top: 16px;
+}
+
+.contact .block img {
+  height: 35vw;
+}
+
+.contact .block-text {
+  margin-left: 5vw;
+  text-align: left;
+}
+
+.contact .block-text > div {
+  padding-top: 32px;
+}
+
+.contact .block-text > div a {
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding-top: 16px;
+}
+
+.contact .block-text p {
+  font-size: 16px;
+  width: auto;
+  line-height: 100%;
+  padding-top: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 2vw 0;
+}
+
+footer img {
+  width: 8.5vw;
+  height: auto;
+}
+
+footer p {
+  font-size: 9px;
+  color: #cccccc;
 }
