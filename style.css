@@ -108,10 +108,13 @@ img {
   filter: grayscale(7%) contrast(110%);
 }
 
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
 html {
   background-color: #2e2e2e;
   color: #fff;
-  font-family: sans-serif;
 }
 
 @media (max-width: 480px) {
