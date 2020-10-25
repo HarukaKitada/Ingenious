@@ -93,6 +93,21 @@ input, select {
 vertical-align:middle;
 }
 
+
+// メディアクエリ用mixin記述
+$sp: 480px;
+
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+
+
 /*
 WEBフォントで「ふい字(HuiFontP109)」 ver130717
 http://customtemplate.blog112.fc2.com/blog-entry-143.html
@@ -115,6 +130,23 @@ img{
 html{
   background-color: #2e2e2e;
   color: #fff;
+  @include sp{
+    background-color: #fff;
+    color: #fff;
+    font-size: 13px;
+  }
+}
+.pc-img{
+  display: block;
+  @include sp{
+    display: none;
+  }
+}
+.sp-img{
+  display: none;
+  @include sp{
+    display: block;     
+  }
 }
 
 header{
@@ -132,6 +164,9 @@ header{
 .fv{
   width: 100vw;
   height: 100vh;
+  @include sp{
+    height: 80vh;
+  }
   .slideshow {
     position: relative;
     z-index: -1;
@@ -143,7 +178,10 @@ header{
       left: 0;
       top: 0;
       opacity: 0;
-      transition: 1.5s; /* フェードの時間(秒) */
+      transition: 3s; /* フェードの時間(秒) */
+      @include sp{
+        height: 80vh;
+      }
     }
     .show {
       opacity: 1;
@@ -168,6 +206,9 @@ header{
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(46, 46, 46, 1));
     top: 80vh;
     position: absolute;
+    @include sp{
+      top: 60vh;
+    }
   }
 }
 
@@ -177,10 +218,17 @@ header{
   margin: 0 auto;
   width: 70vw;
   height: 0;
+  z-index: 4;
+  @include sp{
+    width: 80vw;
+  }
   h2{
     font-size: 24px;
     letter-spacing: 4px;
     font-weight: normal;
+    @include sp{
+      font-size: 16px;
+    }
   }
   &-r{
     h2{
@@ -201,6 +249,11 @@ header{
   top: 88px;
   margin-left: 15vw;
   z-index: 4;
+  @include sp{
+    width: 90vw;  
+    margin-left: 10vw;
+    top: 80px;
+  }
 }
 .bar-l{
   margin: 0;
@@ -211,14 +264,31 @@ header{
   width: 100vw;
   align-items: center;
   justify-content: center;
+  @include sp{
+    flex-direction: column;
+    margin-bottom: 28vh;
+  }
   img{
     width: 50vw;
     height: 55vw;
     object-fit: cover;
+    @include sp{
+      width: 100vw;
+      height: 75vh;
+    }
   }
   &-text{
     text-align: center;
     width: 50vw;
+    @include sp{
+      position: absolute;
+      width: 95vw; 
+      padding: 10vw 0;
+      margin: 5vw;
+      margin-top: 90vh;
+      background-color: #2e2e2e;
+      z-index: 2;
+    }
     h3{
       font-family:'HuiFontP109';
       letter-spacing: 1.5px;
@@ -226,6 +296,10 @@ header{
       font-weight: normal;
       padding-bottom: 16px;
       font-size: 24px;
+      @include sp{
+        font-size: 16px;
+        line-height: 1;
+      }
     }
     &-border{
       width: 320px;
@@ -238,8 +312,15 @@ header{
       letter-spacing: 1.6px;
       line-height: 400%;
       margin: 0 auto;
-      width: 400px;
+      width: 28vw;
+      min-width: 320px;
       padding-top: 40px;
+      @include sp{
+        line-height: 150%; 
+        padding-top: 24px;
+        text-align: left;
+      }
+
     }
     .menu-btn{
       width: 19.5vw;
@@ -258,19 +339,37 @@ header{
 }
 .menu{
   .block{
+    @include sp{
+      margin-bottom: 0px;
+    }
     img{
       height: 35vw;
+      @include sp{
+        height: 60vh;
+      }
     }
     &-text{
+      @include sp{
+        position: relative;
+        margin-top: 0px;
+        width: 100vw;
+        margin-bottom: 0px;
+      }
       p{
         font-size: 13px;
         line-height: 250%;
+        @include sp{
+          line-height: 150%;
+        }
       }
     }
   }
   .first-menu{
     img{
       height: 45vw;
+      @include sp{
+        height: 60vh;
+      }
     }
   }
 }
@@ -279,6 +378,9 @@ iframe{
   width: 100vw;
   height: 30vw;
   filter: grayscale(50%);
+  @include sp{
+    height: 50vh;
+  }
 }
 
 .concept .access .contact{
@@ -286,22 +388,52 @@ iframe{
   padding: 0;
 }
 
+.concept{
+  margin-top: 8vw;
+  @include sp{
+    margin-top: 0;
+  }
+}
+
 .access{
   .block{
+    @include sp{
+      margin-bottom: 0;
+    }
     img{
       height: 45vw;
+      @include sp{
+        height: 60vh; 
+      }
     }
     &-text{
-      margin-left: 15vw;
+      padding-left: 15vw;
       text-align: left;
+      @include sp{
+        padding: 16px 0;
+        position: relative;
+        margin-top: 0px;
+        width: 100vw;
+        margin-bottom: 0px;
+      
+      }
       >div{
         padding-top: 32px;
+        @include sp{
+          padding-bottom: 16px;
+          padding-top: 0px;
+        }
       }
       p{
         font-size: 16px;
         width: auto;
         line-height: 100%;
         padding-top: 16px;
+        @include sp{
+         font-size: 13px;
+         width: 70%;
+         margin: 0 auto;
+        }
       }
 
     }
@@ -310,14 +442,30 @@ iframe{
 
 .contact{
   .block{
+    @include sp{
+      margin-bottom: 0px;
+    }
     img{
       height: 35vw;
+      @include sp{
+        height: 60vh;
+      }
     }
     &-text{
       margin-left: 5vw;
       text-align: left;
+      position: relative;
+      margin-top: 0px;
+      width: 100vw;
+      margin-bottom: 0px;
+    
       >div{
         padding-top: 32px;
+        @include sp{
+          padding: 8px 0;
+          width: 70%;
+          margin: 0 auto;
+        }
         a{
           letter-spacing: 2px;
           color: #fff;
@@ -325,12 +473,20 @@ iframe{
           display: block;
           padding-top: 16px;
         }
+        .sp-tel{
+          a{
+            border-bottom: solid 1px #fff;
+          }
+        }
       }
       p{
         font-size: 16px;
         width: auto;
-        line-height: 100%;
+        line-height: 200%;
         padding-top: 16px;
+        @include sp{
+          font-size: 13px;
+        }
       }
     }
   }
@@ -339,9 +495,16 @@ iframe{
 footer{
   text-align: center;
   padding: 2vw 0;
+  @include sp{
+    background-color: #2e2e2e;
+    padding: 7vh 0;
+  }
   img{
     width: 8.5vw;
     height: auto;
+    @include sp{
+      width: 30vw;
+    }
   }
   p{
     font-size: 9px;
