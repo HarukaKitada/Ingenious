@@ -130,6 +130,7 @@ img{
 html{
   background-color: #2e2e2e;
   color: #fff;
+  font-family: sans-serif;
   @include sp{
     background-color: #fff;
     color: #fff;
@@ -154,6 +155,9 @@ header{
   top: 24px;
   left: 48px;
   z-index: 5;
+  @include sp{
+    left: 24px;
+  }
   img{
     width: 26vw;
     height: auto;
@@ -197,6 +201,10 @@ header{
     img{
       width: 50vw;
       height: auto;
+      @include sp{
+        width: 85vw;
+        padding-top: 40vh;
+      }
     }
   }
 
@@ -328,6 +336,10 @@ header{
       height: 3vw;
       border: solid 1px  #fff;
       margin-top: 24px;
+      @include sp{
+        width: 60vw;
+        padding: 16px;
+      }
       a{
         font-size: 13px;
         text-decoration: none;
@@ -369,6 +381,11 @@ header{
       height: 45vw;
       @include sp{
         height: 60vh;
+      }
+    }
+    h3{
+      @include sp{
+        line-height: 1.5;
       }
     }
   }
@@ -462,8 +479,8 @@ iframe{
       >div{
         padding-top: 32px;
         @include sp{
-          padding: 8px 0;
-          width: 70%;
+          padding: 8px 10vw;
+          width: auto;
           margin: 0 auto;
         }
         a{

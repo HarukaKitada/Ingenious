@@ -111,6 +111,7 @@ img {
 html {
   background-color: #2e2e2e;
   color: #fff;
+  font-family: sans-serif;
 }
 
 @media (max-width: 480px) {
@@ -146,6 +147,12 @@ header {
   top: 24px;
   left: 48px;
   z-index: 5;
+}
+
+@media (max-width: 480px) {
+  header {
+    left: 24px;
+  }
 }
 
 header img {
@@ -206,6 +213,13 @@ header img {
 .fv-logo img {
   width: 50vw;
   height: auto;
+}
+
+@media (max-width: 480px) {
+  .fv-logo img {
+    width: 85vw;
+    padding-top: 40vh;
+  }
 }
 
 .fv-gradient {
@@ -372,6 +386,13 @@ header img {
   margin-top: 24px;
 }
 
+@media (max-width: 480px) {
+  .block-text .menu-btn {
+    width: 60vw;
+    padding: 16px;
+  }
+}
+
 .block-text .menu-btn a {
   font-size: 13px;
   text-decoration: none;
@@ -422,6 +443,12 @@ header img {
 @media (max-width: 480px) {
   .menu .first-menu img {
     height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu .first-menu h3 {
+    line-height: 1.5;
   }
 }
 
@@ -540,8 +567,8 @@ iframe {
 
 @media (max-width: 480px) {
   .contact .block-text > div {
-    padding: 8px 0;
-    width: 70%;
+    padding: 8px 10vw;
+    width: auto;
     margin: 0 auto;
   }
 }
